@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'data-binding';
+  nome: string;
+  idade: number = 20;
+
+  //double lancarDado(){}
+  lancarDado (): number {
+    return Math.floor(Math.random() * 6) + 1;
+  }
+
+  alterarNome(inputEvent): void{
+    console.log(inputEvent.target.value);
+    this.nome = inputEvent.target.value;
+  }
+
+  adicionar (): void{
+    console.log("Adicionando...");
+  }
 }
